@@ -14,31 +14,43 @@ for (var i = 0; i < cubes.length; i++) {
     console.log("%c" + cubes[i], styles)
 }
 
-// Example 3
-for (var i=1;i<=10;i++) {
-    if (i == 1) 
-    console.log("Gold medal");
-    else if (i == 2)
-    console.log("Silver medal");
-    else if (i == 3)
-    console.log("Bronze medal");
-    else
-    console.log(i);
+for (var i = 1; i <= 10; i++) {
+    if(i == 1) 
+    {
+        console.log("Gold medal")
+    } 
+    else if (i == 2) 
+    {
+        console.log("Silver medal")
+    } 
+    else if (i == 3) 
+    {
+        console.log("Bronze medal")
+    } 
+    else 
+    {
+        //this block will run if no condition matches
+        console.log(i)
+    }
 }
 
 // Example 4 with switch
-var i=2;
-switch(i) {
-case 1:
-    console.log("Gold medal");
-    break;
-case 2:
-    console.log("Silver medal");
-    break;
-case 3:
-    console.log("Bronze medal");
-    break;
-default:
-    console.log(i);
-    break;
+for (var i = 1; i <= 10; i++) 
+{
+    switch(i) 
+    {
+        case 1:
+            console.log("Gold medal")
+            break
+        case 2:
+            console.log("Silver medal")
+            break
+        case 3:
+            console.log("Bronze medal")
+            break
+        default:
+            //this block will run if no condition matches
+            console.log(i)
+    }
 }
+
