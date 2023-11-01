@@ -26,4 +26,19 @@ for (var i=1;i<=10;i++) {
     console.log(i);
 }
 
-
+// Example 4 with switch
+var i=2;
+switch(i) {
+case 1:
+    console.log("Gold medal");
+    break;
+case 2:
+    console.log("Silver medal");
+    break;
+case 3:
+    console.log("Bronze medal");
+    break;
+default:
+    console.log(i);
+    break;
+}
