@@ -21,4 +21,13 @@ console.log(Math.min(10,20,30));
 //Trigonometric methods: Math.sin(), Math.cos(), Math.tan(), etc.
 
 
+//Math.random - Generates a number between 0 and 0.99
+console.log(Math.random());
+//Ceil method - Rounds a decimal up to the nearest integer
+console.log(Math.ceil(0.0001));
+console.log(Math.ceil(0.5));
+console.log(Math.ceil(2.99));
 
+var decimal = Math.random() * 10;	//Get randon no between 0 and 0.99
+var rounded = Math.ceil(decimal);	//Round up the value
+console.log(rounded);
