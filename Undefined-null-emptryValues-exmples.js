@@ -26,3 +26,15 @@ console.log(name, address);
 
 //Reference error will occur when you try to display an underfined variable
 console.log(sample2);
+
+//another example - function to add two numbers with try and catch block
+function addTwoNums(a,b) 
+{
+    try {
+        console.log(a + b);
+    }
+    catch(err) {
+        console.log(err);
+    }
+}
+addTwoNums(5,5);
