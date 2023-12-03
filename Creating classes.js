@@ -36,5 +36,61 @@ train4.getPrototype(); // {constructor: f, toggleLights: f, ligthsStatus: f, get
 
 //To inherit from one class to a new sub-class, JavaScript provides the extends keyword
 class HighSpeedTrain extends Train {
+    constructor(passengers, highSpeedOn, color, lightsOn) {
+        //In JavaScript classes, super is used to specify what property gets inherited from the super-class in the sub-class.
+        super(color, lightsOn);
+        this.passengers = passengers;
+        this.highSpeedOn = highSpeedOn;
+    }
+    toggleHighSpeed() {
+        this.highSpeedOn = !this.highSpeedOn;
+        console.log('High speed status:', this.highSpeedOn);
+    }
+    toggleLights() {
+        super.toggleLights();
+        super.lightsStatus();
+        console.log('Lights are 100% operational.');
+    }
 }
 
+var train5 = new Train('blue', false);
+var highSpeed1 = new HighSpeedTrain(200, false, 'green', false);
+
+train5.toggleLights(); // undefined
+train5.lightsStatus(); // Lights on? true
+highSpeed1.toggleLights(); // Lights on? true, Lights are 100% operational.
+
+//visualize what is happening 
+train5.getPrototype(); // {constructor: ƒ, toggleLights: ƒ, lightsStatus: ƒ, getSelf: ƒ, getPrototype: ƒ}
+highSpeed1.getPrototype(); // Train {constructor: ƒ, toggleHighSpeed: ƒ, toggleLights: ƒ}
+
+
+
+//Example 2
+class StationaryBike {
+    constructor(position, gears) {
+        this.position = position
+        this.gears = gears
+    }
+}
+
+class Treadmill {
+    constructor(position, modes) {
+        this.position = position
+        this.modes = modes
+    }
+}
+
+class Gym {
+    constructor(openHrs, stationaryBikePos, treadmillPos) {
+        this.openHrs = openHrs
+        this.stationaryBike = new StationaryBike(stationaryBikePos, 8)
+        this.treadmill = new Treadmill(treadmillPos, 5)
+    }
+}
+
+var boxingGym = new Gym("7-22", "right corner", "left corner")
+
+console.log(boxingGym.openHrs) //
+console.log(boxingGym.stationaryBike) //
+console.log(boxingGym.treadmill) //
