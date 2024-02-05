@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation - Add H2</title>
+</head>
+<body>
+    <h1 style="align-self: center;">
+        DOM Manipulation Example
+    </h1>
+    <button name="Manipulate DOM" onclick="addH2()"  value="Manipulate DOM">Manipulate DOM</button>
+    <button name="Manipulate DOM" onclick="removeH2()">Remove H2</button>
+</body>
+<script type="text/javascript">
+function addH2() {
+    //Add Element h2
+    const h2=document.createElement('h2');
+    //Add text to h2
+    h2.innerText = "Added h2 for DOM manipulation"
+    //Add id & class
+    h2.setAttribute('id','sub-heading');
+    h2.setAttribute('class','h2-class');
+    //Append h2 to DOM
+    document.body.appendChild(h2);
+}
+function removeH2() {
+    const rh2=document.getElementById('sub-heading');
+    document.body.removeChild(rh2);
+}
+</script>
+</html>
