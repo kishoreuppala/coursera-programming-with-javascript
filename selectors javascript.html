@@ -1,0 +1,49 @@
+
+<script type="text/javascript">
+    // To get all elements from HTML page
+    document
+function clogoutput() {
+    //querySelector() method returns the first element in the document
+    console.log(document.querySelector('h2'));
+    //querySelectorAll() method returns all elements in the document
+    console.log(document.querySelectorAll('h2'));
+    //getElementById() method returns a specific element whose id matches the selector
+    console.log(document.getElementById('heading1'));
+    //getElementsByClassName() method returns all elements in the document that has the class specified
+    console.log(document.getElementsByClassName('h2-class'));
+}
+</script>
+
+<!-- Below is referrence HTML file --> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation - Add H2</title>
+</head>
+<body>
+    <h1 style="align-self: center;" id="heading1">
+        DOM Manipulation Example
+    </h1>
+    <button name="Manipulate DOM" onclick="addH2(),clogoutput()"  value="Manipulate DOM">Manipulate DOM</button>
+    <button name="Manipulate DOM" onclick="removeH2(),clogoutput()">Remove H2</button>
+</body>
+<script type="text/javascript">
+function addH2() {
+    //Add Element h2
+    const h2=document.createElement('h2');
+    //Add text to h2
+    h2.innerText = "Added h2 for DOM manipulation"
+    //Add id & class
+    h2.setAttribute('id','sub-heading');
+    h2.setAttribute('class','h2-class');
+    //Append h2 to DOM
+    document.body.appendChild(h2);
+}
+function removeH2() {
+    const rh2=document.getElementById('sub-heading');
+    document.body.removeChild(rh2);
+}
+</script>
+</html>
