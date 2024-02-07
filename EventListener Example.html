@@ -1,0 +1,63 @@
+<!-- Below is referrence HTML file --> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation - Add H2</title>
+</head>
+
+    <h1 style="align-self: center;" id="heading1" onclick="onClickEvent2()">
+        DOM Manipulation Example
+    </h1>
+    <button name="Manipulate DOM" onclick="addH2()"  value="Manipulate DOM">Manipulate DOM</button>
+    <button name="RemoveH2" onclick="removeH2()">Remove H2</button>
+<body>
+    <h3>Body starting from here to test <b> addEventListener</b></h3>
+    <br><br><br><br><br><br><br><br><br><br>
+    <h3>Body ends here...</h3>
+
+</body>
+</html>
+<!-- ////////////////////////////////////////// -->
+<script type="text/javascript">
+    //When clicked on body
+    function clickedme() {
+        // console.log("Clicked on the body.");
+        console.log('Clicked on body...')
+    }
+    
+    const target1 = document.querySelector('body');
+    if (target1) 
+    {
+        target1.addEventListener('click', clickedme);
+    } 
+    else 
+    {
+        console.error('target1(body) not found.');
+    }
+    //console.log("Target: " , target1)
+    //target1.addEventListener('click', clickedme)
+
+    //When clicked on heading -> add onclick event in h1
+    function onClickEvent2() {
+        console.log("Clicked on heading...");
+    }
+</script>
+<script type="text/javascript">
+    function addH2() {
+        //Add Element h2
+        const h2=document.createElement('h2');
+        //Add text to h2
+        h2.innerText = "Added h2 for DOM manipulation"
+        //Add id & class
+        h2.setAttribute('id','sub-heading');
+        h2.setAttribute('class','h2-class');
+        //Append h2 to DOM
+        document.body.appendChild(h2);
+    }
+    function removeH2() {
+        const rh2=document.getElementById('sub-heading');
+        document.body.removeChild(rh2);
+    }
+    </script>
