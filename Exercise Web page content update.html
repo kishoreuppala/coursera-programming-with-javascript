@@ -1,0 +1,34 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise: WebPage Content Update</title>
+</head>
+<body>
+    <p>WebPage Content Update</p>
+    <!-- Setting Javascript in the body to avoid issue null innerText issue(Uncaught TypeError: Cannot set properties of null (setting 'innerText')) -->
+    <script>
+        // let answer = prompt('What is your Name?');
+        // if (typeof(answer) === 'string') {
+        //     var h1 = document.createElement('h1');
+        //     h1.innerText = answer;
+        //     document.body.innerText = '';
+        //     document.body.appendChild(h1);
+        // }
+    
+        let answer = prompt('What is your name?');
+    if (typeof(answer) === 'string') {
+        //check propted value is coming or not
+        console.log(answer);
+        var h1 = document.createElement('h1')
+        h1.innerText = "Welcome, " + answer;
+    }
+    document.body.innerText ='';
+    document.body.appendChild(h1)
+    </script>
+    
+</body>
+</html>
