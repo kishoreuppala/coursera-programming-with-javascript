@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Web page content update2</title>
+</head>
+<body>
+    <h2>Exercise Web page content update2</h2>
+    <script type="text/javascript">
+        var h1 = document.createElement('h1');
+        h1.innerText = "Type into input to make this text change";
+        // var h4=document.createElement('h3');
+        // h4.innerText = "";
+
+        var para = document.createElement('p');
+        para.innerText = 'Name';
+        var input = document.createElement('input');
+        input.setAttribute('type','text');
+        para2 = document.createElement('p');
+        para2.innerText = '';
+
+        document.body.innerText = '';
+        document.body.appendChild(h1);
+        document.body.appendChild(para);
+        document.body.appendChild(input);
+        document.body.appendChild(para2);
+        // document.appendChild(h4);
+        
+        input.addEventListener('change', function() {
+            console.log(input.value);
+            h1.innerText = input.value;
+            // h4.innerText = "Preview";
+            para2.innerText = "Name: " + input.value;
+        })
+    </script>
+</body>
+
+</html>
