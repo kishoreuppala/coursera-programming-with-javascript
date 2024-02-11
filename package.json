@@ -1,0 +1,15 @@
+{
+  "name": "coursera-programming-with-javascript",
+  "version": "1.0.0",
+  "description": "Javascript notes or examples documenting here only for education purpose.",
+  "main": "addFive.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
